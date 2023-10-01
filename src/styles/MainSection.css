@@ -1,0 +1,7 @@
+.mainSection__section {
+  height: 625px;
+  background: url("/src/images/clouds.svg");
+  background-color: #404eed;
+  display: flex;
+  flex-direction: column;
+}

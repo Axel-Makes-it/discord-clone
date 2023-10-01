@@ -1,0 +1,85 @@
+.hero__section {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__container {
+  max-width: 1260px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding-bottom: 25px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.hero__text h1 {
+  font-size: 55.45px;
+  font-family: "abc";
+}
+
+.hero__text p {
+  font-size: 20px;
+  font-family: "gg";
+}
+
+.hero__btn__container {
+  display: flex;
+  gap: 25px;
+}
+
+.hero__btn-white {
+  padding: 16px 32px;
+  border: none;
+  border-radius: 50px;
+  transition: 0.35s;
+  color: #404eed;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.hero__btn-white:hover {
+  box-shadow: 0px 6px 20px 2px rgba(0, 0, 0, 0.25);
+  color: #404eed;
+}
+
+.hero__btn-black {
+  padding: 16px 32px;
+  border: none;
+  border-radius: 50px;
+  background-color: #23272a;
+  color: #ffffff;
+  transition: 0.35s;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.hero__btn-black:hover {
+  box-shadow: 0px 6px 20px 2px rgba(0, 0, 0, 0.25);
+  background-color: #313338;
+}
+
+@font-face {
+  font-family: "abc";
+  src: url("C:\Users\16892\Desktop\Apps\Portfolio\discord-page-app\src\fonts\ABC Ginto Nord-normal-800-100.ttf");
+}
+
+@font-face {
+  font-family: "gg";
+  src: url("C:\Users\16892\Desktop\Apps\Portfolio\discord-page-app\src\fonts\gg sans-normal-400-100.ttf");
+}
