@@ -30,4 +30,3 @@ function Hero() {
 }
 
 export default Hero;
-//yup

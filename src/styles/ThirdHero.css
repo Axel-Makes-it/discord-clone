@@ -1,0 +1,27 @@
+.thirdHero__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1260px;
+  gap: 150px;
+}
+
+.thirdHero__text {
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+  gap: 20px;
+}
+
+.thirdHero__text h2 {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: "gg-Ebold";
+}
+
+.thirdHero__text p {
+  font-size: 20px;
+  font-family: "gg";
+}

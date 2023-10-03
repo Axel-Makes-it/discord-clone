@@ -18,7 +18,7 @@ function Nav() {
           <li>Careers</li>
         </ul>
 
-        <div className="nav__login-btn">Login</div>
+        <div className="nav__login-btn">Open Discord</div>
       </nav>
     </section>
   );
