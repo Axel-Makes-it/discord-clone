@@ -86,3 +86,28 @@
   font-family: "gg";
   src: url("../fonts/gg.ttf");
 }
+
+/* Media query */
+@media (max-width: 1450px) {
+}
+
+@media (max-width: 1170px) {
+  .hero__btn__container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1000px) {
+  .hero__text h1 {
+    font-size: 44.36px;
+  }
+  .hero__text p {
+    font-size: 16px;
+  }
+  .hero__btn-white {
+    font-size: 16px;
+  }
+  .hero__btn-black {
+    font-size: 16px;
+  }
+}

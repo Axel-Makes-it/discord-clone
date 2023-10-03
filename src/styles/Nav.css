@@ -55,3 +55,10 @@ ul li:hover {
   font-family: "gg";
   src: url("../fonts/gg.ttf");
 }
+
+/* Media query to hide the nav below 1024px */
+@media (max-width: 1023px) {
+  nav ul {
+    display: none;
+  }
+}

@@ -1,5 +1,5 @@
 .mainSection__section {
-  position: relative; /* Create a positioning context */
+  position: relative;
   height: 625px;
   background: url("/src/images/clouds.svg");
   background-color: #404eed;
@@ -8,17 +8,83 @@
 }
 
 .leftIMG {
-  width: 580px;
+  width: 550px;
   object-fit: cover;
   position: absolute;
   bottom: 0;
-  left: -60px;
+  left: 0;
+  transition: width 0.3s ease;
 }
 
 .rightIMG {
-  width: 580px;
+  width: 550px;
   object-fit: cover;
   position: absolute;
   bottom: 0;
-  right: -60px;
+  right: 0;
+  transition: width 0.3s ease;
+}
+
+/* Media query */
+@media (max-width: 1848px) {
+  .leftIMG {
+    width: 450px;
+  }
+  .rightIMG {
+    width: 450px;
+  }
+}
+
+@media (max-width: 1664px) {
+  .leftIMG {
+    width: 350px;
+  }
+  .rightIMG {
+    width: 350px;
+  }
+}
+
+@media (max-width: 1430px) {
+  .leftIMG {
+    width: 250px;
+  }
+  .rightIMG {
+    width: 250px;
+  }
+}
+
+@media (max-width: 790px) {
+  .leftIMG {
+    width: 200px;
+  }
+  .rightIMG {
+    width: 200px;
+  }
+}
+
+@media (max-width: 690px) {
+  .leftIMG {
+    width: 180px;
+  }
+  .rightIMG {
+    width: 180px;
+  }
+}
+
+@media (max-width: 645px) {
+  .leftIMG {
+    width: 150px;
+  }
+  .rightIMG {
+    width: 150px;
+  }
+}
+
+@media (max-width: 580px) {
+  .leftIMG {
+    width: 105px;
+  }
+  .rightIMG {
+    width: 105px;
+  }
 }
