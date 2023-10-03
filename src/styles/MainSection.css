@@ -1,7 +1,23 @@
 .mainSection__section {
+  position: relative; /* Create a positioning context */
   height: 625px;
   background: url("/src/images/clouds.svg");
   background-color: #404eed;
   display: flex;
   flex-direction: column;
+}
+
+.leftIMG {
+  width: 550px;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+}
+
+.rightIMG {
+  width: 550px;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
