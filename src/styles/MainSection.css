@@ -8,16 +8,17 @@
 }
 
 .leftIMG {
-  width: 550px;
+  width: 580px;
   object-fit: cover;
   position: absolute;
   bottom: 0;
+  left: -60px;
 }
 
 .rightIMG {
-  width: 550px;
+  width: 580px;
   object-fit: cover;
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -60px;
 }
