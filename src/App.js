@@ -1,23 +1,19 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import FooterSection from "./components/FooterSection";
-import MainSection from "./components/MainSection";
-import SubSectionDown from "./components/SubSectionDown";
-import SubSectionFive from "./components/SubSectionFive";
-import SubSectionOne from "./components/SubSectionOne";
-import SubSectionThree from "./components/SubSectionThree";
-import SubSectionTwo from "./components/SubSectionTwo";
+import DashboardPage from "./pages/Dashboard";
+import Home from "./components/Home";
 
 function App() {
   return (
-    <div>
-      <MainSection />
-      <SubSectionOne />
-      <SubSectionTwo />
-      <SubSectionThree />
-      <SubSectionFive />
-      <SubSectionDown />
-      <FooterSection />
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

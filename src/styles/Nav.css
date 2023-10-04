@@ -68,6 +68,14 @@ ul li:hover {
 .nav__menu-img {
   display: none;
 }
+
+.nav__login-btn {
+  text-decoration: none;
+  color: #23272a;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 /* Media query to hide the nav below 1024px */
 @media (max-width: 1023px) {
   nav ul {

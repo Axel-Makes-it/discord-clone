@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Nav.css";
 import LOGO from "../images/Logo.svg";
 import MENU from "../images/menu.svg";
@@ -18,7 +19,9 @@ function Nav() {
           <li>Careers</li>
         </ul>
         <div className="nav__action">
-          <div className="nav__login-btn">Open Discord</div>
+          <Link to="/dashboard" className="nav__login-btn">
+            Open Discord
+          </Link>
           <img className="nav__menu-img" src={MENU} alt="Menu" />
         </div>
       </nav>
