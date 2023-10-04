@@ -2,54 +2,45 @@
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  height: 100%;
   align-items: center;
 }
 
 .footer__container {
-  min-width: 1260px;
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-.footer__cat {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer__cat h4 {
-  font-size: 16px;
-  font-family: "gg";
-  color: #5865f2;
-  padding-bottom: 10px;
-}
-
-.footer__cat h4 {
-  font-size: 16px;
-  font-family: "gg";
-}
-
-.footer__cat span {
-  font-size: 16px;
-  font-family: "gg";
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .footer__content {
   display: flex;
-  padding-bottom: 40px;
+  flex-wrap: wrap;
+  padding: 20px 0;
   border-bottom: 1px solid #5865f2;
-  min-width: 1260px;
+  width: 100%;
+  max-width: 1260px;
   justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.footer__cat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 250px;
 }
 
 .footer__signup {
   padding-top: 20px;
-  min-width: 1260px;
+  width: 100%;
+  max-width: 1260px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .footer__signup button {
@@ -80,13 +71,18 @@
   text-decoration: underline;
 }
 
-.footer__signup {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 @font-face {
   font-family: "gg";
   src: url("../fonts/gg.ttf");
+}
+
+@media (max-width: 1270px) {
+  .footer__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__cat {
+    max-width: none;
+  }
 }

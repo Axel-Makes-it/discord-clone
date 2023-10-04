@@ -1,4 +1,8 @@
 .footerSection__section {
   background-color: #23272a;
-  height: 611px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 40px;
 }
