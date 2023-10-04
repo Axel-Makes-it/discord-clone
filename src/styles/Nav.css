@@ -51,6 +51,15 @@ ul li:hover {
   color: #404eed;
 }
 
+.nav__action {
+  display: flex;
+}
+
+.nav__menu-img {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
 @font-face {
   font-family: "gg";
   src: url("../fonts/gg.ttf");
