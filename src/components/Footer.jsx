@@ -6,6 +6,7 @@ import FB from "../images/FB.svg";
 import UTUBE from "../images/UTUBE.svg";
 import TIKTOK from "../images/TIKTOK.svg";
 import LOGO from "../images/Logo.svg";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -34,7 +35,9 @@ function Footer() {
         </div>
         <div className="footer__signup">
           <img src={LOGO} alt="" />
-          <button>Open Discord</button>
+          <Link to="/dashboard" className="footer__signup-btn">
+            <button>Open Discord</button>
+          </Link>
         </div>
       </div>
     </footer>

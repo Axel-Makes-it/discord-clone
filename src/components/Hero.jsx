@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Hero.css";
 import DOWNLOAD2 from "../images/download2.svg";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -20,9 +21,12 @@ function Hero() {
             <img src={DOWNLOAD2} alt="download" />
             Download for Windows
           </button>
-          <button className="hero__btn-black">
-            Open Discord in your broswer
-          </button>
+
+          <Link to="/dashboard">
+            <button className="hero__btn-black">
+              Open Discord in your browser
+            </button>
+          </Link>
         </div>
       </div>
     </section>
