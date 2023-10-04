@@ -5,7 +5,7 @@ import IMGONE from "../images/imgOne.svg";
 function SecondHero() {
   return (
     <section className="sectionHero__container">
-      <img src={IMGONE} alt="" />
+      <img className="imgOne" src={IMGONE} alt="icon" />
       <div className="sectionHero__text">
         <h2>Create an invite-only place where you belong</h2>
         <p>

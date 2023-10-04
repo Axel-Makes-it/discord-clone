@@ -12,7 +12,7 @@ function FifthHero() {
           hello over video, watch friends stream their games, or gather up and
           have a drawing session with screen share.
         </p>
-        <img src={IMGFIVE} alt="ICON" />
+        <img className="imgFive" src={IMGFIVE} alt="ICON" />
       </div>
     </section>
   );

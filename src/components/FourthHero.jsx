@@ -5,7 +5,7 @@ import IMGTHREE from "../images/imgThree.svg";
 function FourthHero() {
   return (
     <section className="fourthHero__container">
-      <img src={IMGTHREE} alt="" />
+      <img className="imgThree" src={IMGTHREE} alt="" />
       <div className="fourthHero__text">
         <h2>From few to a fandom</h2>
         <p>

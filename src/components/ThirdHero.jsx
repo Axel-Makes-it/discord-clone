@@ -13,7 +13,7 @@ function ThirdHero() {
           having to call.
         </p>
       </div>
-      <img src={IMGTWO} alt="" />
+      <img className="imgTwo" src={IMGTWO} alt="icon" />
     </section>
   );
 }

@@ -25,3 +25,44 @@
   font-size: 20px;
   font-family: "gg";
 }
+
+.imgTwo {
+  width: 100%;
+  max-width: 100%;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 1312px) {
+  .imgTwo {
+    width: 550px;
+  }
+
+  .thirdHero__text h2 {
+    font-size: 38.4px;
+  }
+
+  .thirdHero__text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1110px) {
+  .imgTwo {
+    width: 450px;
+  }
+
+  .thirdHero__text h2 {
+    font-size: 34.56px;
+  }
+
+  .thirdHero__text p {
+    font-size: 14.4px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .thirdHero__container {
+    flex-direction: column;
+    gap: 50px;
+  }
+}

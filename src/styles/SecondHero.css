@@ -26,7 +26,48 @@
   font-family: "gg";
 }
 
+.imgOne {
+  width: 100%;
+  max-width: 100%;
+  transition: width 0.3s ease;
+}
+
 @font-face {
   font-family: "gg-Ebold";
   src: url("../fonts/gg-extraBold.ttf");
+}
+
+@media (max-width: 1312px) {
+  .imgOne {
+    width: 550px;
+  }
+
+  .sectionHero__text h2 {
+    font-size: 38.4px;
+  }
+
+  .sectionHero__text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1110px) {
+  .imgOne {
+    width: 450px;
+  }
+
+  .sectionHero__text h2 {
+    font-size: 34.56px;
+  }
+
+  .sectionHero__text p {
+    font-size: 14.4px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .sectionHero__container {
+    flex-direction: column;
+    gap: 50px;
+  }
 }

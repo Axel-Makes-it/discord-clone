@@ -25,6 +25,8 @@
 .fifthHero__text p {
   font-size: 20px;
   font-family: "gg";
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
 @font-face {
@@ -35,4 +37,45 @@
 @font-face {
   font-family: "abc";
   src: url("../fonts/abc.ttf");
+}
+
+.imgFive {
+  width: 100%;
+  max-width: 100%;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 1312px) {
+  .imgFive {
+    width: 550px;
+  }
+
+  .fifthHero__text h2 {
+    font-size: 38.4px;
+  }
+
+  .fifthHero__text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1110px) {
+  .imgFive {
+    width: 450px;
+  }
+
+  .fifthHero__text h2 {
+    font-size: 34.56px;
+  }
+
+  .fifthHero__text p {
+    font-size: 14.4px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .fifthHero__text {
+    flex-direction: column;
+    gap: 50px;
+  }
 }
