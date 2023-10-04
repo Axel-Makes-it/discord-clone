@@ -88,3 +88,12 @@
     width: 105px;
   }
 }
+
+@media (max-width: 500px) {
+  .leftIMG {
+    width: 80px;
+  }
+  .rightIMG {
+    width: 80px;
+  }
+}
