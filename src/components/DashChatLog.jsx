@@ -44,6 +44,15 @@ function DashChatLog() {
         <div className="dashChatLog__message">
           <p>sup</p>
         </div>
+        <div className="dashChatLog__message">
+          <p>sup</p>
+        </div>
+        <div className="dashChatLog__message">
+          <p>sup</p>
+        </div>
+        <div className="dashChatLog__message">
+          <p>sup</p>
+        </div>
       </div>
     </section>
   );
