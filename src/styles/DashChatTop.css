@@ -1,0 +1,12 @@
+.dashChatTop__section {
+  background-color: #313338;
+  color: #ffffff;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid #1e1f22c9;
+  box-shadow: 0px 1px 1px 1px #1e1f2231;
+}

@@ -1,0 +1,7 @@
+.DashRightBar__section {
+  flex-grow: 1;
+  height: 100vh;
+  background-color: #313338;
+  color: #ffffff;
+  overflow: hidden;
+}

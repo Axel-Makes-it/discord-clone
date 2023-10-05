@@ -1,0 +1,98 @@
+.dashSidebar__section {
+  background-color: #1e1f22;
+  width: 72px;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashSidebar__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+#border-line {
+  border-top: 2px solid #313338;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.dashSidebar__discordIcon {
+  width: 48px;
+  height: 48px;
+  background-color: #313338;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s;
+}
+
+.dashSidebar__discordIcon:hover {
+  background-color: #5865f2;
+  border-radius: 17px;
+  cursor: pointer;
+}
+
+.dashSidebar__addChat {
+  width: 48px;
+  height: 48px;
+  background-color: #313338;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s;
+}
+
+.dashSidebar__addChat:hover {
+  background-color: #23a559;
+  border-radius: 17px;
+  cursor: pointer;
+}
+
+.dashChatTop__info {
+  display: flex;
+  align-items: center;
+}
+
+.dashChatTop__info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashChatTop__room {
+  gap: 10px;
+  font-family: "gg-500";
+  font-weight: 500;
+  color: #f2f3f5;
+  display: flex;
+  align-items: center;
+}
+
+.dashChatTop__trash {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #1e1f22c9;
+  background-color: #1e1f22c9;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.25s;
+}
+
+.dashChatTop__trash:hover {
+  background-color: #ff00042c;
+}
+
+@font-face {
+  font-family: "gg-500";
+  src: url("../fonts/gg-500.ttf");
+}
