@@ -1,0 +1,43 @@
+.dashChatLog__section {
+  display: flex;
+  flex-direction: column;
+  height: 88vh;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.dashChatLog__container {
+  flex-grow: 1; /* Expand to fill available space */
+  overflow-y: auto; /* Enable vertical scrolling */
+  scrollbar-width: thin; /* Remove scrollbar in Firefox */
+  scrollbar-color: orange #1a1b1e; /* Customize scrollbar colors */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dashChatLog__message {
+  background-color: #383a40;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+}
+
+/* Style the scrollbar track */
+.dashChatLog__container::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+  background-color: #2b2d31; /* Change the background color to orange */
+}
+
+/* Style the scrollbar thumb */
+.dashChatLog__container::-webkit-scrollbar-thumb {
+  background-color: #1a1b1e; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Round the edges of the scrollbar thumb */
+}
+
+/* Style the scrollbar thumb on hover */
+.dashChatLog__container::-webkit-scrollbar-thumb:hover {
+  background-color: #1a1b1e; /* Color of the scrollbar thumb on hover */
+}
