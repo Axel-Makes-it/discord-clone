@@ -58,7 +58,6 @@ function DashChatLog() {
         <div className="dashChatLog__message">hey</div>
         <div className="dashChatLog__message">hi</div>
         <div className="dashChatLog__message">hi</div>
-        {/* ... Add more chat messages here */}
       </div>
     </section>
   );
