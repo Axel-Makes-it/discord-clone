@@ -5,8 +5,11 @@ import {
   getAuth,
   signInWithEmailAndPassword,
   onAuthStateChanged,
+  GoogleAuthProvider,
+  signInWithPopup,
 } from "firebase/auth";
 import "../styles/Login.css";
+import google from "../images/google.png";
 
 function Login() {
   const navigate = useNavigate();
@@ -55,6 +58,21 @@ function Login() {
     }
   };
 
+  const handleGoogleLogin = async () => {
+    const provider = new GoogleAuthProvider();
+
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+
+      console.log("Logged in with Google:", user);
+
+      navigate("/dashboard");
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
   return (
     <section className="login__section">
       <div className="login__container">
@@ -75,6 +93,13 @@ function Login() {
           />
           <button type="submit">Log in</button>
         </form>
+        <div className="google__login">
+          <button onClick={handleGoogleLogin}>
+            {" "}
+            <img src={google} alt="google" width={30} />
+            Log in with Google
+          </button>
+        </div>
         <div className="demo__container">
           <p>
             Email: <span className="demo">firebase-demo@gmail.com</span>
@@ -83,6 +108,7 @@ function Login() {
             Password: <span>firebase1995</span>
           </p>
         </div>
+
         {error && <p>{error}</p>}
       </div>
     </section>

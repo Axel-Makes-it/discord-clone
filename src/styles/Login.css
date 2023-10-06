@@ -77,6 +77,46 @@
   background-color: #4752c4;
 }
 
+.google__login {
+  margin-top: 5px;
+  background-color: #db4437;
+  border-radius: 10px;
+  color: #ececec;
+  height: 44px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 15px;
+
+  font-family: "gg";
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  justify-content: center;
+  font-weight: 700;
+  transition: 0.35s;
+}
+
+.google__login button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.google__login:hover {
+  background-color: #c71100;
+}
+
+.google__login button {
+  border: none;
+  background-color: transparent;
+  color: #ececec;
+  font-family: "gg-500";
+  font-size: 16px;
+}
+
 .demo__container {
   padding-top: 10px;
   display: flex;
