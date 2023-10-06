@@ -70,4 +70,23 @@
   cursor: pointer;
   justify-content: center;
   font-weight: 700;
+  transition: 0.35s;
+}
+
+.login__container form button:hover {
+  background-color: #4752c4;
+}
+
+.demo__container {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  font-size: 16px;
+}
+.demo__container span {
+  font-family: "gg";
+  font-size: 16px;
+  color: #929292;
 }

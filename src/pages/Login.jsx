@@ -6,7 +6,6 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
 } from "firebase/auth";
-import { GoogleAuthProvider } from "firebase/auth";
 import "../styles/Login.css";
 
 function Login() {
@@ -28,7 +27,6 @@ function Login() {
 
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
-  const googleProvider = new GoogleAuthProvider();
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -47,19 +45,6 @@ function Login() {
         email,
         password
       );
-      const user = userCredential.user;
-
-      console.log("Logged in user:", user);
-
-      navigate("/dashboard");
-    } catch (err) {
-      setError(err.message);
-    }
-  };
-
-  const handleGoogleLogin = async () => {
-    try {
-      const userCredential = await auth.signInWithPopup(googleProvider);
       const user = userCredential.user;
 
       console.log("Logged in user:", user);
@@ -90,7 +75,14 @@ function Login() {
           />
           <button type="submit">Log in</button>
         </form>
-        <button onClick={handleGoogleLogin}>Log in with Google</button>
+        <div className="demo__container">
+          <p>
+            Email: <span className="demo">firebase-demo@gmail.com</span>
+          </p>
+          <p>
+            Password: <span>firebase1995</span>
+          </p>
+        </div>
         {error && <p>{error}</p>}
       </div>
     </section>
