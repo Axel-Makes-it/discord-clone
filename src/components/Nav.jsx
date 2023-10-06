@@ -19,7 +19,7 @@ function Nav() {
           <li>Careers</li>
         </ul>
         <div className="nav__action">
-          <Link to="/dashboard" className="nav__login-btn">
+          <Link to="/login" className="nav__login-btn">
             Open Discord
           </Link>
           <img className="nav__menu-img" src={MENU} alt="Menu" />

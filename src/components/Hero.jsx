@@ -22,7 +22,7 @@ function Hero() {
             Download for Windows
           </button>
 
-          <Link to="/dashboard">
+          <Link to="/login">
             <button className="hero__btn-black">
               Open Discord in your browser
             </button>

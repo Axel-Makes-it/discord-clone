@@ -35,7 +35,7 @@ function Footer() {
         </div>
         <div className="footer__signup">
           <img src={LOGO} alt="" />
-          <Link to="/dashboard" className="footer__signup-btn">
+          <Link to="/login" className="footer__signup-btn">
             <button>Open Discord</button>
           </Link>
         </div>
