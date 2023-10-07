@@ -120,6 +120,12 @@
 
 .dashChatLog__message {
   justify-content: space-between;
+  align-items: center;
+}
+
+.message {
+  display: flex;
+  align-items: center;
 }
 
 /* custom scroll bar*/

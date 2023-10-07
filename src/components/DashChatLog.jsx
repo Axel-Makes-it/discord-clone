@@ -38,6 +38,7 @@ function DashChatLog() {
   };
 
   const scrollToRecentMessage = () => {
+    // Scroll to the most recent message
     if (messageContainerRef.current) {
       messageContainerRef.current.scrollTop =
         messageContainerRef.current.scrollHeight -
