@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { initializeApp } from "firebase/app";
 import {
   getFirestore,
@@ -31,10 +31,50 @@ const db = getFirestore(app);
 function DashChatLog() {
   const [value, setValue] = useState("");
   const [messages, setMessages] = useState([]);
+  const messageContainerRef = useRef(null);
 
   const handleInputChange = (e) => {
     setValue(e.target.value);
   };
+
+  const scrollToRecentMessage = () => {
+    if (messageContainerRef.current) {
+      messageContainerRef.current.scrollTop =
+        messageContainerRef.current.scrollHeight -
+        messageContainerRef.current.clientHeight;
+    }
+  };
+
+  const handleDeleteMessage = async (message) => {
+    try {
+      if (auth.currentUser && auth.currentUser.uid === message.userId) {
+        await deleteDoc(doc(db, "messages", message.id));
+      }
+    } catch (error) {
+      console.error("Error deleting message: ", error);
+    }
+  };
+
+  useEffect(() => {
+    const q = query(collection(db, "messages"), orderBy("timestamp"));
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const newMessages = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setMessages(newMessages);
+
+      scrollToRecentMessage();
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
+  useEffect(() => {
+    scrollToRecentMessage();
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -52,45 +92,20 @@ function DashChatLog() {
         await addDoc(collection(db, "messages"), messageData);
 
         setValue("");
+
+        scrollToRecentMessage();
       } catch (error) {
         console.error("Error adding message: ", error);
       }
     }
   };
 
-  const handleDeleteMessage = async (message) => {
-    try {
-      // Check if the message was sent by the currently authenticated user
-      if (auth.currentUser && auth.currentUser.uid === message.userId) {
-        // Delete the message from Firestore
-        await deleteDoc(doc(db, "messages", message.id));
-      }
-    } catch (error) {
-      console.error("Error deleting message: ", error);
-    }
-  };
-
-  useEffect(() => {
-    const q = query(collection(db, "messages"), orderBy("timestamp"));
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      const newMessages = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setMessages(newMessages);
-    });
-
-    return () => {
-      unsubscribe();
-    };
-  }, []);
-
   return (
     <section className="dashChatLog__section">
-      <div className="dashChatLog__container">
+      <div className="dashChatLog__container" ref={messageContainerRef}>
         {messages.map((message, index) => (
           <div className="dashChatLog__message" key={index}>
-            <div className="messege">
+            <div className="message">
               <div className="user">
                 <img
                   id="userPhoto"

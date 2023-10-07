@@ -95,7 +95,13 @@
   border-radius: 7px;
   font-size: 20px;
   cursor: pointer;
+  border: 1px solid #1e1f22c9;
   transition: 0.05s;
+}
+
+#delete:hover {
+  background-color: #ff000036;
+  color: #f0f0f0;
 }
 
 .messege {
