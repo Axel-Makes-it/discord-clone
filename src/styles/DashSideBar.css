@@ -115,9 +115,7 @@
   align-items: center;
   padding: 5px;
   margin-top: 5px;
-
   height: 100vh;
-  justify-content: flex-end;
 }
 
 @font-face {
