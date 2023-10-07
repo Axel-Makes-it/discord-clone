@@ -87,6 +87,35 @@
   cursor: pointer;
 }
 
+#delete {
+  color: #e6e6e6;
+  background-color: #1a1b1e;
+  border: none;
+  padding: 10px;
+  border-radius: 7px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.05s;
+}
+
+.messege {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#userName {
+  font-family: "gg-500";
+  font-size: 12px;
+  color: #7e7e7e;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.dashChatLog__message {
+  justify-content: space-between;
+}
+
 /* custom scroll bar*/
 
 .dashChatLog__container::-webkit-scrollbar {

@@ -7,6 +7,8 @@ import {
   query,
   orderBy,
   onSnapshot,
+  deleteDoc,
+  doc,
 } from "firebase/firestore";
 import { auth } from "../firebase";
 import "../styles/DashChatLog.css";
@@ -43,6 +45,8 @@ function DashChatLog() {
           content: value,
           timestamp: new Date(),
           userProfileImage: user.photoURL,
+          userId: user.uid,
+          userName: user.displayName,
         };
 
         await addDoc(collection(db, "messages"), messageData);
@@ -54,10 +58,25 @@ function DashChatLog() {
     }
   };
 
+  const handleDeleteMessage = async (message) => {
+    try {
+      // Check if the message was sent by the currently authenticated user
+      if (auth.currentUser && auth.currentUser.uid === message.userId) {
+        // Delete the message from Firestore
+        await deleteDoc(doc(db, "messages", message.id));
+      }
+    } catch (error) {
+      console.error("Error deleting message: ", error);
+    }
+  };
+
   useEffect(() => {
     const q = query(collection(db, "messages"), orderBy("timestamp"));
     const unsubscribe = onSnapshot(q, (snapshot) => {
-      const newMessages = snapshot.docs.map((doc) => doc.data());
+      const newMessages = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
       setMessages(newMessages);
     });
 
@@ -71,15 +90,23 @@ function DashChatLog() {
       <div className="dashChatLog__container">
         {messages.map((message, index) => (
           <div className="dashChatLog__message" key={index}>
-            <div className="user">
-              <img
-                id="userPhoto"
-                src={message.userProfileImage || demoImage}
-                alt="User Profile"
-              />
-              <p>{message.userName}</p>
+            <div className="messege">
+              <div className="user">
+                <img
+                  id="userPhoto"
+                  src={message.userProfileImage || demoImage}
+                  alt="User Profile"
+                />
+                <p id="userName">{message.userName}</p>
+              </div>
+              <p>{message.content}</p>
             </div>
-            <p>{message.content}</p>
+
+            {auth.currentUser && auth.currentUser.uid === message.userId && (
+              <button id="delete" onClick={() => handleDeleteMessage(message)}>
+                Delete
+              </button>
+            )}
           </div>
         ))}
       </div>
