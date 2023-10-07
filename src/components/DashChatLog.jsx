@@ -10,6 +10,7 @@ import {
 } from "firebase/firestore";
 import { auth } from "../firebase";
 import "../styles/DashChatLog.css";
+import demoImage from "../images/demo.png";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -63,7 +64,7 @@ function DashChatLog() {
     return () => {
       unsubscribe();
     };
-  });
+  }, []);
 
   return (
     <section className="dashChatLog__section">
@@ -73,7 +74,7 @@ function DashChatLog() {
             <div className="user">
               <img
                 id="userPhoto"
-                src={message.userProfileImage}
+                src={message.userProfileImage || demoImage}
                 alt="User Profile"
               />
               <p>{message.userName}</p>
