@@ -78,7 +78,7 @@
 }
 
 .google__login {
-  margin-top: 5px;
+  margin-top: 7px;
   background-color: #db4437;
   border-radius: 10px;
   color: #ececec;
@@ -103,6 +103,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 
 .google__login:hover {
@@ -129,4 +130,17 @@
   font-family: "gg";
   font-size: 16px;
   color: #929292;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  font-family: "gg";
+  margin-top: 5px;
+}
+
+.dashChatLog__message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

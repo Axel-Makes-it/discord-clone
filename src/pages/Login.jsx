@@ -109,7 +109,7 @@ function Login() {
           </p>
         </div>
 
-        {error && <p>{error}</p>}
+        {error && <p className="error">{error}</p>}
       </div>
     </section>
   );
